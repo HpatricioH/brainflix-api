@@ -11,7 +11,7 @@ model comments {
   id        String    @id @unique(map: "id_UNIQUE") @db.VarChar(255)
   video_id  String    @db.VarChar(255)
   name      String?   @db.VarChar(255)
-  comment   String?   @db.VarChar(255)
+  comment   String?   @db.LongText
   likes     Int?
   timestamp DateTime? @db.Timestamp(0)
   videos    videos    @relation(fields: [video_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "video_id")
@@ -24,7 +24,7 @@ model videos {
   title       String?    @db.VarChar(255)
   channel     String?    @db.VarChar(255)
   image       String?    @db.VarChar(255)
-  description String?    @db.VarChar(255)
+  description String?    @db.LongText
   views       String?    @db.VarChar(255)
   likes       String?    @db.VarChar(255)
   duration    String?    @db.VarChar(255)
