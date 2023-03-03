@@ -1,4 +1,4 @@
-const videos = [
+export const videos = [
   {
     id: '84e96018-4022-434e-80bf-000ce4cd12b8',
     title: 'BMX Rampage: 2021 Highlights',
@@ -109,5 +109,3 @@ const videos = [
     timestamp: 1632344461000
   }
 ]
-
-module.exports = { videos }

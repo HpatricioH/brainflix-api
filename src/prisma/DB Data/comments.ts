@@ -1,4 +1,4 @@
-const comments = [
+export const comments = [
   {
     id: '35bba08b-1b51-4153-ba7e-6da76b5ec1b9',
     video_id: '84e96018-4022-434e-80bf-000ce4cd12b8',
@@ -200,5 +200,3 @@ const comments = [
     timestamp: 1632496261000
   }
 ]
-
-module.exports = { comments }
