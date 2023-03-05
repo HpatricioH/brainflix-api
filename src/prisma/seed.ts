@@ -1,30 +1,9 @@
 import { videos } from './DB Data/videos'
 import { comments } from './DB Data/comments'
 import { PrismaClient } from '@prisma/client'
+import { Video, Comment } from '../utils/models'
 
 const prisma = new PrismaClient()
-
-type Video = {
-  id: string
-  title: string
-  channel: string
-  image: string
-  description: string
-  views: string
-  likes: string
-  duration: string
-  video: string
-  timestamp: number
-}
-
-type Comment = {
-  id: string
-  video_id: string
-  name: string
-  comment: string
-  likes: number
-  timestamp: number
-}
 
 async function seed () {
   await Promise.all(
@@ -40,7 +19,7 @@ async function seed () {
           likes: video.likes,
           duration: video.duration,
           video: video.video,
-          timestamp: new Date(video.timestamp)
+          timestamp: video.timestamp
         }
       })
     })
@@ -55,7 +34,7 @@ async function seed () {
           name: comment.name,
           comment: comment.comment,
           likes: comment.likes,
-          timestamp: new Date(comment.timestamp)
+          timestamp: comment.timestamp
         }
       })
     }

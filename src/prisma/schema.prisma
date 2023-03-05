@@ -8,13 +8,13 @@ datasource db {
 }
 
 model comments {
-  id        String    @id @unique(map: "id_UNIQUE") @db.VarChar(255)
-  video_id  String    @db.VarChar(255)
-  name      String?   @db.VarChar(255)
-  comment   String?   @db.LongText
+  id        String  @id @unique(map: "id_UNIQUE") @db.VarChar(255)
+  video_id  String  @db.VarChar(255)
+  name      String? @db.VarChar(255)
+  comment   String? @db.LongText
   likes     Int?
-  timestamp DateTime? @db.Timestamp(0)
-  videos    videos    @relation(fields: [video_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "video_id")
+  timestamp String? @db.VarChar(255)
+  videos    videos  @relation(fields: [video_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "video_id")
 
   @@index([video_id], map: "id_idx")
 }
@@ -29,6 +29,6 @@ model videos {
   likes       String?    @db.VarChar(255)
   duration    String?    @db.VarChar(255)
   video       String?    @db.VarChar(255)
-  timestamp   DateTime?  @db.Timestamp(0)
+  timestamp   String?    @db.VarChar(255)
   comments    comments[]
 }
