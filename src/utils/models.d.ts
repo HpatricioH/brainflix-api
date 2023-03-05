@@ -17,5 +17,5 @@ export type Comment = {
   name: string
   comment: string
   likes: number
-  timestamp: number
+  timestamp: string
 }
