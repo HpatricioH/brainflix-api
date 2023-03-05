@@ -26,7 +26,7 @@ model videos {
   image       String?    @db.VarChar(255)
   description String?    @db.LongText
   views       String?    @db.VarChar(255)
-  likes       String?    @db.VarChar(255)
+  likes       Int?
   duration    String?    @db.VarChar(255)
   video       String?    @db.VarChar(255)
   timestamp   String?    @db.VarChar(255)
