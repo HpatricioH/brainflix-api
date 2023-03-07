@@ -2,7 +2,7 @@ import { PrismaClient } from '@prisma/client'
 import { uuid } from 'uuidv4'
 const prisma = new PrismaClient()
 
-// GEt all videos with comments
+// Get all videos with comments
 export const getVideos = async () => {
   return await prisma.videos.findMany({
     include: {
