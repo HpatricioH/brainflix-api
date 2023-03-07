@@ -24,3 +24,6 @@ yarn-error.log*
 #Ignore vs code 
 .vscode
 .eslintrc.js
+/test-results/
+/playwright-report/
+/playwright/.cache/

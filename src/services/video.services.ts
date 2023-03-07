@@ -2,7 +2,7 @@ import { PrismaClient } from '@prisma/client'
 import { uuid } from 'uuidv4'
 const prisma = new PrismaClient()
 
-// GEt all videos with comments
+// Get all videos with comments
 export const getVideos = async () => {
   return await prisma.videos.findMany({
     include: {
@@ -41,7 +41,8 @@ export const createComment = async (id:string, comment: string, name: string, ti
       video_id: id,
       comment,
       name,
-      timestamp
+      timestamp,
+      likes: 0
     }
   })
 }
