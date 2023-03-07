@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test'
 
+// comment tests to be run in order to test the API (add, like, and delete) run test one by one
 test('add a comment to a video', async ({ request, baseURL }) => {
   const response = await request.post(`${baseURL}/76ca28c0-7dea-4553-887f-8e5129a80fc3/comments`, {
     data: {

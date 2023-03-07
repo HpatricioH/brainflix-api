@@ -41,7 +41,8 @@ export const createComment = async (id:string, comment: string, name: string, ti
       video_id: id,
       comment,
       name,
-      timestamp
+      timestamp,
+      likes: 0
     }
   })
 }

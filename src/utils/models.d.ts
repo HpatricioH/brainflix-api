@@ -5,10 +5,10 @@ export type Video = {
   image: string
   description: string
   views: string
-  likes: string
+  likes: number
   duration: string
   video: string
-  timestamp: number
+  timestamp: string
 }
 
 export type Comment = {
