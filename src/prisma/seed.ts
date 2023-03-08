@@ -1,7 +1,7 @@
 import { videos } from './DB Data/videos'
 import { comments } from './DB Data/comments'
 import { PrismaClient } from '@prisma/client'
-import { Video, Comment } from '../utils/models'
+// import { Video, Comment } from '../utils/models'
 
 const prisma = new PrismaClient()
 
@@ -43,10 +43,10 @@ async function seed () {
 
 seed()
 
-function getVideos (): Array<Video> {
+function getVideos () {
   return videos
 }
 
-function getComments (): Array<Comment> {
+function getComments () {
   return comments
 }
